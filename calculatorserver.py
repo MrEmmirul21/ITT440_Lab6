@@ -34,7 +34,7 @@ def process_start(s_sock):
             elif fun[0] == 'd':
                 fun = "Factorial"
                 answer = math.factorial(num)
-                print('Perform calculation: 'str(num)+'! = '+str(answer))
+                print('Perform calculation: '+str(num)+'! = '+str(answer))
             else:
                 answer = ('Calculation error! Please try another input.')
 

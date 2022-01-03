@@ -12,24 +12,23 @@ except socket.error as e:
 
 Response = ClientSocket.recv(2048)
 print(Response.decode("utf-8"))
-print('<<<Math calculator>>>')
 
 while True:
-    print('<<<Math calculator>>>')
+    print('<<<<<Online Calculator>>>>>\n')
     print('Function available:')
     print('a - Logarithmic(base-10)')
     print('b - Square Root')
     print('c - Exponential')
     print('d - Factorial')
-    print('\nx - Exit\n')
+    print('x - Exit\n')
 
-    func = input('Enter the function : ')
+    func = input('Choose the function : ')
 
     if func != 'x':
         numb = input('Enter the number : ')
         ClientSocket.send(str.encode(func+':'+numb))
         Response = ClientSocket.recv(2048)
-        print('Answer = ')
+        print('Answer :')
         print(Response.decode('utf-8'))
 
     else:
